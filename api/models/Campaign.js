@@ -8,7 +8,9 @@
 module.exports = {
 
   attributes: {
-
+	  organization: { model: 'organization', required: true },
+	  managedBy: { collection: 'manager', via: 'campaigns' },
+	  products: { collection: 'product', via: 'partOf', dominant: true }
   }
 };
 

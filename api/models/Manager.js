@@ -7,8 +7,12 @@
 
 module.exports = {
 
-  attributes: {
-
+	attributes: {
+	  firstName: { type: 'string', required: true },
+	  lastName: { type: 'string', required: true },
+	  email: { type: 'email',  required: true },
+	  createdBy: { model: 'admin' },
+	  campaigns: { collection: 'campaign', via: 'managedBy', dominant: true }
   }
 };
 

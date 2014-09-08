@@ -8,7 +8,9 @@
 module.exports = {
 
   attributes: {
-
+	  name: { type: 'string', required: true },
+	  type: { type: 'string', required: true },
+	  campaigns: { collection: 'campaign', via: 'organization' }
   }
 };
 

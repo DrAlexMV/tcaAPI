@@ -7,8 +7,14 @@
 
 module.exports = {
 
-  attributes: {
-
-  }
+	attributes: {
+		email: { type: 'email',  required: true, unique: true },
+		firstName: { type: 'string', required: true },
+		lastName: { type: 'string', required: true },
+		password: { type: 'string', required: true },
+		activated: { type: 'boolean', required: true },
+		activatedBy: { model: 'admin' },
+		activationDate: { type: 'date' }
+	}
 };
 

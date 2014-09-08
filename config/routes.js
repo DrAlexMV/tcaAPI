@@ -32,9 +32,9 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': {
-    view: 'homepage'
-  },
+	'/': {
+		view: 'homepage'
+	},
 
   /***************************************************************************
   *                                                                          *
@@ -45,5 +45,16 @@ module.exports.routes = {
   * for configuration options and examples.                                  *
   *                                                                          *
   ***************************************************************************/
+
+	/* Campaign API Endpoints */
+  'GET /campaigns/:id': 'CampaignController.get',
+  'POST /campaigns/': 'CampaignController.create',
+	'POST /campaigns/:id/addManager': 'CampaignController.addManager',
+	'POST /campaigns/:id/addProduct': 'CampaignController.addProduct',
+
+	/* Organization API Endpoints */
+	'GET /organizations/:id': 'OrganizationController.find',
+	'POST /organizations/': 'OrganizationController.create',
+	'POST /organizations/:id/addMember': 'OrganizationController.addMember'
 
 };
