@@ -7,6 +7,15 @@
 
 module.exports = {
 	/**
+	 * `OrganizationController.getAll()`
+	 */
+	getAll: function (req, res) {
+		Organization.find(function (err, organization) {
+			if (err) { return res.json(err); }
+			return res.json(organization)
+		});
+	},
+	/**
 	 * `OrganizationController.get()`
 	 */
 	find: function (req, res) {

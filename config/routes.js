@@ -53,6 +53,7 @@ module.exports.routes = {
 	'POST /campaigns/:id/addProduct': 'CampaignController.addProduct',
 
 	/* Organization API Endpoints */
+	'GET /organizations/': 'OrganizationController.getAll',
 	'GET /organizations/:id': 'OrganizationController.find',
 	'POST /organizations/': 'OrganizationController.create',
 	'POST /organizations/:id/addMember': 'OrganizationController.addMember'
